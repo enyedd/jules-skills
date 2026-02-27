@@ -51,7 +51,6 @@ def check_env():
 
 def main():
     # Robust config traversal
-    agent_config = config.get("agent_config", config) # Handle both nested and flat config
     skill_paths = agent_config.get("knowledge", {}).get("skill_paths", ["./._/skills"])
 
     skills = discover_skills(skill_paths)
