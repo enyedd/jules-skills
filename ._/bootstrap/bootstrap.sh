@@ -4,11 +4,11 @@
 cd "$(dirname "$0")/../.."
 
 # Set permissions if needed
-sudo chmod +x ./._/bootstrap/bootstrap.py
+sudo chmod +x /._/bootstrap/bootstrap.py
 
 # Run the discovery script
 # The output of this script is captured by Jules during startup
-python3 ./._/bootstrap/bootstrap.py
+python3 /._/bootstrap/bootstrap.py
 
 if [ $? -eq 0 ]; then
     echo "ASP Discovery successful."
