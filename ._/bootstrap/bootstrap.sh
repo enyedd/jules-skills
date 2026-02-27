@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Ensure we are in the project root
-cd "$(dirname "$0")/../.."
+# Jules Agent Bootstrap Script
+# This script initializes the agent context by loading configuration and discovering skills.
 
-# Set permissions if needed
-sudo chmod +x ._/bootstrap/bootstrap.py
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BOOTSTRAP_PY="$SCRIPT_DIR/bootstrap.py"
 
-# Run the discovery script
-# The output of this script is captured by Jules during startup
-python3 ._/bootstrap/bootstrap.py
-
-if [ $? -eq 0 ]; then
-    echo "ASP Discovery successful."
-else
-    echo "ASP Discovery failed." >&2
+if [ ! -f "$BOOTSTRAP_PY" ]; then
+    echo "Error: bootstrap.py not found in $SCRIPT_DIR"
     exit 1
 fi
+
+# Run the python bootstrap script
+python3 "$BOOTSTRAP_PY"
+
+echo ""
+echo "Bootstrap complete. You are ready to work."
