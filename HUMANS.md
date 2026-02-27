@@ -50,8 +50,8 @@ pip install requests
 pip install PyYAML
 
 # Run bootstrap to initialize agent context
-sudo chmod +x ._/bootstrap/bootstrap.sh
-._/bootstrap/bootstrap.sh
+sudo chmod +x ./._/init/bootstrap.sh
+./._/init/bootstrap.sh
 ```
 
 ## Shorthand Syntax, to reference skills, prompts, studies
