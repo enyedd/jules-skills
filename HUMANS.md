@@ -45,10 +45,12 @@ Setup script (via https://jules.google.com/repo/github/OWNER/REPOSITORY/config):
 ```shell
 # jules-api
 pip install requests
+
 # skill-creator
 pip install PyYAML
 
 # Run bootstrap to initialize agent context
+chmod +x ./._/bootstrap/bootstrap.sh
 ./._/bootstrap/bootstrap.sh
 ```
 

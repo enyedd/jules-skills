@@ -4,7 +4,7 @@
 cd "$(dirname "$0")/../.."
 
 # Set permissions if needed
-chmod +x ./._/bootstrap/bootstrap.py
+# chmod +x ./._/bootstrap/bootstrap.py
 
 # Run the discovery script
 # The output of this script is captured by Jules during startup
