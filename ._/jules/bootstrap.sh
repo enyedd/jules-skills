@@ -4,7 +4,7 @@
 # This script initializes the agent context by loading configuration and discovering skills.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BOOTSTRAP_PY="$SCRIPT_DIR/bootstrap.py"
+BOOTSTRAP_PY="$SCRIPT_DIR/_bootstrap.py"
 
 if [ ! -f "$BOOTSTRAP_PY" ]; then
     echo "Error: bootstrap.py not found in $SCRIPT_DIR"
